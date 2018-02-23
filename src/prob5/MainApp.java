@@ -4,7 +4,7 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		try {
-			MyStack stack = new MyStack(3);
+			MyStack<String> stack = new MyStack<String>(3);
 			stack.push("Hello");
 			stack.push("World");
 			stack.push("!!!");
@@ -13,6 +13,7 @@ public class MainApp {
 
 			while (stack.isEmpty() == false) {
 				String s = stack.pop();
+				// Integer i = (Integer)stack.pop(); -> Complie OK, Runtime Error
 				System.out.println( s );
 			}
 
